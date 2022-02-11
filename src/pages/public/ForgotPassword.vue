@@ -27,6 +27,11 @@
         <button type="submit" class="app-forgot-password__form__button">
           Enviar
         </button>
+        <router-link to="/login">
+          <button class="app-forgot-password__form__button--back">
+            Voltar para o login
+          </button>
+        </router-link>
       </form>
     </div>
   </div>
@@ -79,6 +84,10 @@ const handlePasswordReset = async () => {
 
       &__button {
         @apply w-full mt-6 mb-4 bg-green-700 rounded-lg px-4 py-2 text-lg text-white tracking-wide font-semibold font-sans;
+
+        &--back {
+          @apply w-full bg-gray-500 rounded-lg px-4 py-2 text-lg text-white tracking-wide font-semibold font-sans;
+        }
       }
     }
   }
