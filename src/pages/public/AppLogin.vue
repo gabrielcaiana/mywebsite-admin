@@ -54,7 +54,7 @@ const form = ref({
 const handleLogin = async () => {
   try {
     await login(form.value);
-    router.push({ name: "profile" });
+    router.push({ name: "home" });
   } catch (error) {
     alert(error.message);
   }

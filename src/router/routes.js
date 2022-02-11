@@ -55,7 +55,7 @@ const routes = [
     beforeEnter: async () => {
       const { logout } = useAuthUser();
       await logout();
-      return { name: "home" };
+      return { name: "login" };
     },
   },
   {
