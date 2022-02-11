@@ -52,7 +52,7 @@ const { getUser: user } = useLoggedInUserStore();
     @apply flex justify-center items-center h-screen;
 
     #{$this}__form {
-      @apply p-8 border-2 border-gray-200 rounded-md w-3/5;
+      @apply p-8 border-2 border-gray-200 rounded-md w-2/5;
 
       &__title {
         @apply text-center text-2xl mb-6 text-gray-600 font-bold font-sans;

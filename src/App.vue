@@ -1,6 +1,6 @@
 <template>
   <div class="app">
-    <header class="app__header">
+    <header v-if="user" class="app__header">
       <router-link to="/home">Gabriel Caiana - Admin</router-link>
       <router-link to="/logout">logout</router-link>
     </header>
@@ -10,7 +10,10 @@
   </div>
 </template>
 
-<script setup></script>
+<script setup>
+import useAuthUser from "./composables/UseAuthUser";
+const { user } = useAuthUser();
+</script>
 
 <style lang="scss" scoped>
 .app {
