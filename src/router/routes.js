@@ -67,12 +67,12 @@ const routes = [
     component: () => import("../pages/private/Home.vue"),
   },
   {
-    path: "/me",
-    name: "Me",
+    path: "/profile",
+    name: "profile",
     meta: {
       requiresAuth: true,
     },
-    component: () => import("../pages/private/Me.vue"),
+    component: () => import("../pages/private/Profile.vue"),
   },
 ];
 

@@ -32,7 +32,7 @@ router.beforeEach((to, from, next) => {
   } else if (
     to.matched.some((record) => record.meta.hideForAuth && isLoggedIn())
   ) {
-    next({ name: "Me" });
+    next({ name: "profile" });
   } else {
     next();
   }
