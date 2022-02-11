@@ -1,9 +1,5 @@
 <template>
   <div class="app-home">
-    <div class="app-home__header">
-      <span>Gabriel Caiana - Admin</span>
-      <router-link to="/logout">logout</router-link>
-    </div>
     <div class="app-home__content">
       <div class="app-home__col">
         <div class="app-home__card">
@@ -26,10 +22,6 @@ export default {
 .app-home {
   $this: &;
   @apply bg-gray-100;
-
-  &__header {
-    @apply flex justify-between bg-white p-4;
-  }
 
   &__content {
     @apply grid grid-cols-4 gap-3 h-screen;
