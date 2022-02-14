@@ -1,9 +1,6 @@
 <template>
   <div class="app">
-    <header v-if="user" class="app__header">
-      <router-link to="/home">Gabriel Caiana - Admin</router-link>
-      <router-link to="/logout">logout</router-link>
-    </header>
+    <Header v-if="user" />
     <main>
       <router-view />
     </main>
@@ -12,6 +9,7 @@
 
 <script setup>
 import useAuthUser from "./composables/UseAuthUser";
+import Header from "./components/Header/index.vue";
 const { user } = useAuthUser();
 </script>
 
