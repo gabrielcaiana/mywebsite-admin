@@ -10,3 +10,8 @@ export default {
   name: "AppHeader",
 };
 </script>
+<style lang="scss" scoped>
+.header {
+  @apply flex justify-between bg-white py-4 px-6;
+}
+</style>

@@ -3,6 +3,5 @@
 <script>
 export default {
   name: "SiteHome",
-  setup() {},
 };
 </script>
