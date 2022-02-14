@@ -2,7 +2,7 @@
 
 <script>
 export default {
-  name: "HomePage",
+  name: "SiteHome",
   setup() {},
 };
 </script>

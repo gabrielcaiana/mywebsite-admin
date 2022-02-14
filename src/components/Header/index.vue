@@ -7,6 +7,6 @@
 
 <script>
 export default {
-  name: "HeaderComponent",
+  name: "AppHeader",
 };
 </script>

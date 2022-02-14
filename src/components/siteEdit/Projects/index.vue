@@ -2,7 +2,7 @@
 
 <script>
 export default {
-  name: "ProjectsPage",
+  name: "SiteProjects",
   setup() {},
 };
 </script>

@@ -2,7 +2,7 @@
 
 <script>
 export default {
-  name: "JobsPage",
+  name: "SiteJobs",
   setup() {},
 };
 </script>
