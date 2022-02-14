@@ -3,16 +3,22 @@
     <div class="app-home__content">
       <div class="app-home__col">
         <div class="app-home__card">
-          <span class="app-home__card__subtitle">Editar páginas do site</span>
           <ul class="app-home__card__list">
             <li @click="setCurrent(Welcome)">Bem vindo</li>
+          </ul>
+        </div>
+        <div class="app-home__card">
+          <ul class="app-home__card__list">
+            <li @click="setCurrent(Profile)">Meu perfil</li>
+          </ul>
+        </div>
+        <div class="app-home__card">
+          <span class="app-home__card__subtitle">Editar páginas do site</span>
+          <ul class="app-home__card__list">
             <li @click="setCurrent(Home)">Página inicial</li>
             <li @click="setCurrent(Jobs)">Experiência</li>
             <li @click="setCurrent(Projects)">Projetos</li>
           </ul>
-        </div>
-        <div class="app-home__card">
-          <router-link to="/profile">Meu perfil</router-link>
         </div>
       </div>
       <div class="app-home__col col-span-3">
@@ -29,6 +35,7 @@ import Welcome from "../../components/WelcomePage/index.vue";
 import Home from "../../components/siteEdit/Home/index.vue";
 import Jobs from "../../components/siteEdit/Jobs/index.vue";
 import Projects from "../../components/siteEdit/Projects/index.vue";
+import Profile from "./Profile.vue";
 
 import { ref } from "vue";
 
@@ -56,8 +63,6 @@ const setCurrent = (component) => (current.value = component);
         }
 
         &__list {
-          @apply mt-6;
-
           & > * {
             @apply my-2 cursor-pointer;
           }

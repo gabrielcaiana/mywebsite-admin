@@ -66,14 +66,14 @@ const routes = [
     },
     component: () => import("../pages/private/Home.vue"),
   },
-  {
-    path: "/profile",
-    name: "profile",
-    meta: {
-      requiresAuth: true,
-    },
-    component: () => import("../pages/private/Profile.vue"),
-  },
+  // {
+  //   path: "/profile",
+  //   name: "profile",
+  //   meta: {
+  //     requiresAuth: true,
+  //   },
+  //   component: () => import("../pages/private/Profile.vue"),
+  // },
 ];
 
 export default routes;

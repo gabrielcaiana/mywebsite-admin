@@ -29,10 +29,6 @@
             disabled
           />
         </div>
-
-        <router-link to="/home">
-          <button class="app-profile__form__button">Voltar para home</button>
-        </router-link>
       </form>
     </div>
   </div>
@@ -49,10 +45,9 @@ const { getUser: user } = useLoggedInUserStore();
   $this: &;
 
   &__content {
-    @apply flex justify-center items-center h-screen;
-
+    @apply flex justify-center items-center py-6;
     #{$this}__form {
-      @apply p-8 border-2 border-gray-200 rounded-md w-2/5;
+      @apply w-3/5;
 
       &__title {
         @apply text-center text-2xl mb-6 text-gray-600 font-bold font-sans;
@@ -68,10 +63,6 @@ const { getUser: user } = useLoggedInUserStore();
         &:disabled {
           @apply opacity-50 bg-gray-200 cursor-not-allowed;
         }
-      }
-
-      &__button {
-        @apply w-full mt-6 bg-gray-500 rounded-lg px-4 py-2 text-lg text-white tracking-wide font-semibold font-sans;
       }
     }
   }
