@@ -37,9 +37,9 @@ import Jobs from "../../components/siteEdit/Jobs/index.vue";
 import Projects from "../../components/siteEdit/Projects/index.vue";
 import Profile from "./Profile.vue";
 
-import { ref } from "vue";
+import { shallowRef } from "vue";
 
-const current = ref(Welcome);
+const current = shallowRef(Welcome);
 
 const setCurrent = (component) => (current.value = component);
 </script>
