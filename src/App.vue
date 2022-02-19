@@ -13,10 +13,4 @@ import Header from "./components/Header/index.vue";
 const { user } = useAuthUser();
 </script>
 
-<style lang="scss" scoped>
-.app {
-  &__header {
-    @apply flex justify-between bg-white p-4;
-  }
-}
-</style>
+<style lang="scss" scoped></style>
