@@ -42,13 +42,13 @@
     </div>
 
     <div class="home__form__action">
-      <button type="submit" class="home__form__button">atualizar</button>
+      <button class="home__form__button" @click="update">atualizar</button>
     </div>
   </div>
 </template>
 
 <script setup>
-import { getAbout } from "../../../services/algolia";
+import { getAbout, updateAbout } from "../../../services/algolia";
 import { ref } from "vue";
 
 const about = ref(null);
@@ -56,8 +56,16 @@ const about = ref(null);
 const get = async () => {
   try {
     const { data, status } = await getAbout();
-
     if (data && status === 200) about.value = data.hits[0];
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+const update = async () => {
+  try {
+    const { status } = await updateAbout(about.value);
+    console.log(status);
   } catch (error) {
     console.log(error);
   }
