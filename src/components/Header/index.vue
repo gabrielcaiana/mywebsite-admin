@@ -1,5 +1,5 @@
 <template>
-  <header class="app__header">
+  <header class="header">
     <router-link to="/home">System Admin</router-link>
     <router-link to="/logout">logout</router-link>
   </header>
