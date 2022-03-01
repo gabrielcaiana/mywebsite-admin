@@ -52,11 +52,7 @@ const form = ref({
   password: "",
 });
 
-Sentry.setContext("user", {
-  email: form.value.email,
-});
-
-Sentry.setTag("loginTag", "login");
+Sentry.setTag("loginTag", "login-failed");
 
 const handleLogin = async () => {
   try {
