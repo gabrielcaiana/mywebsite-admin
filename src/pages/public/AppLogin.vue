@@ -42,6 +42,7 @@
 import { ref } from "vue";
 import useAuthUser from "../../composables/UseAuthUser";
 import { useRouter } from "vue-router";
+import * as Sentry from "@sentry/vue";
 
 const router = useRouter();
 const { login } = useAuthUser(); // add loginWithSocialProvider to login socialMedia
@@ -51,12 +52,19 @@ const form = ref({
   password: "",
 });
 
+Sentry.setContext("user", {
+  email: form.value.email,
+});
+
+Sentry.setTag("loginTag", "login");
+
 const handleLogin = async () => {
   try {
     await login(form.value);
     router.push({ name: "home" });
   } catch (error) {
     alert(error.message);
+    throw new Error(error.message);
   }
 };
 </script>
