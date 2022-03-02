@@ -29,7 +29,7 @@ const get = async () => {
     if (data && status === 200) jobs.value = data.hits;
     console.log(jobs.value);
   } catch (error) {
-    console.log(error);
+    throw new Error(error.message);
   }
 };
 get();

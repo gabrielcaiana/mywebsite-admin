@@ -43,8 +43,12 @@ const password = ref("");
 const token = route.query.token;
 
 const handlePasswordReset = async () => {
-  await resetPassword(token, password.value);
-  router.push({ name: "login" });
+  try {
+    await resetPassword(token, password.value);
+    router.push({ name: "login" });
+  } catch (error) {
+    throw new Error(error.message);
+  }
 };
 </script>
 
