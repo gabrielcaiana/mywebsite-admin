@@ -37,7 +37,7 @@ const get = async () => {
     if (data && status === 200) projects.value = data.hits;
     console.log(projects.value);
   } catch (error) {
-    console.log(error);
+    throw new Error(error.message);
   }
 };
 get();

@@ -58,7 +58,7 @@ const get = async () => {
     const { data, status } = await getAbout();
     if (data && status === 200) about.value = data.hits[0];
   } catch (error) {
-    console.log(error);
+    throw new Error(error.message);
   }
 };
 
@@ -67,7 +67,7 @@ const update = async () => {
     const { status } = await updateAbout(about.value);
     console.log(status);
   } catch (error) {
-    console.log(error);
+    throw new Error(error.message);
   }
 };
 
