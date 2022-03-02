@@ -7,27 +7,27 @@ const routes = [
       return "/";
     },
   },
-  // {
-  //   path: "/register",
-  //   name: "register",
-  //   meta: {
-  //     hideForAuth: true,
-  //   },
-  //   component: () => import("../pages/public/AppRegister.vue"),
-  // },
-  // {
-  //   path: "/email-confirmation",
-  //   name: "EmailConfirmation",
-  //   meta: {
-  //     hideForAuth: true,
-  //   },
-  //   beforeEnter: (to) => {
-  //     if (!to.query.email) {
-  //       return { name: "login" };
-  //     }
-  //   },
-  //   component: () => import("../pages/public/EmailConfirmation.vue"),
-  // },
+  {
+    path: "/register",
+    name: "register",
+    meta: {
+      hideForAuth: true,
+    },
+    component: () => import("../pages/public/AppRegister.vue"),
+  },
+  {
+    path: "/email-confirmation",
+    name: "EmailConfirmation",
+    meta: {
+      hideForAuth: true,
+    },
+    beforeEnter: (to) => {
+      if (!to.query.email) {
+        return { name: "login" };
+      }
+    },
+    component: () => import("../pages/public/EmailConfirmation.vue"),
+  },
   {
     path: "/",
     name: "login",
@@ -66,14 +66,14 @@ const routes = [
     },
     component: () => import("../pages/private/Home.vue"),
   },
-  // {
-  //   path: "/profile",
-  //   name: "profile",
-  //   meta: {
-  //     requiresAuth: true,
-  //   },
-  //   component: () => import("../pages/private/Profile.vue"),
-  // },
+  {
+    path: "/profile",
+    name: "profile",
+    meta: {
+      requiresAuth: true,
+    },
+    component: () => import("../pages/private/Profile.vue"),
+  },
 ];
 
 export default routes;

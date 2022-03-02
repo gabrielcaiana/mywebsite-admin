@@ -4,7 +4,7 @@
       <div class="app-home__col">
         <div class="app-home__card">
           <ul class="app-home__card__list">
-            <li @click="setCurrent(Welcome)">Bem vindo</li>
+            <li @click="setCurrent(Welcome)">Bem vindo(a)</li>
           </ul>
         </div>
         <div class="app-home__card">
