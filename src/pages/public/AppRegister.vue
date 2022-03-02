@@ -75,7 +75,8 @@ const handleSubmit = async () => {
       query: { email: form.value.email },
     });
   } catch (error) {
-    console.error(error.message);
+    alert(error.message);
+    throw new Error(error.message);
   }
 };
 </script>
