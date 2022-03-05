@@ -1,0 +1,12 @@
+version: "3.4"
+services:
+  gabrielcaiana-admin:
+    container_name: gabrielcaiana-admin
+    image: node:lts
+    working_dir: /var/www/html/app/
+    entrypoint: /bin/bash
+    expose:
+      - 8000
+    volumes:
+      - ./frontend/:/var/www/html/app
+    tty: true
