@@ -35,7 +35,7 @@
 </template>
 
 <script setup>
-import { useLoggedInUserStore } from "../../store/loggedInUser";
+import { useLoggedInUserStore } from "@/store/loggedInUser";
 
 const { getUser: user } = useLoggedInUserStore();
 </script>

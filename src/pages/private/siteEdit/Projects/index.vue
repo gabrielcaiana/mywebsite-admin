@@ -1,7 +1,7 @@
 <template>
   <div v-if="projects" class="projects">
     <div class="flex items-center justify-between">
-      <h1 class="projects__title">Editar experiências</h1>
+      <h1 class="projects__title">Editar projetos</h1>
 
       <button class="projects__button">atualizar</button>
     </div>
@@ -26,7 +26,7 @@
 </template>
 
 <script setup>
-import { getprojects } from "../../../services/algolia";
+import { getprojects } from "@/services/algolia";
 import { ref } from "vue";
 
 const projects = ref(null);

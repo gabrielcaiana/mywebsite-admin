@@ -29,7 +29,7 @@
 </template>
 
 <script setup>
-import useAuthUser from "../../composables/UseAuthUser";
+import useAuthUser from "@/composables/UseAuthUser";
 import { ref } from "vue";
 import { useRouter, useRoute } from "vue-router";
 
