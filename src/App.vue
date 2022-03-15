@@ -48,6 +48,14 @@
 import useAuthUser from "./composables/UseAuthUser";
 import Header from "./components/Header/index.vue";
 const { user } = useAuthUser();
+import { onMounted } from "vue";
+
+onMounted(() => {
+  console.log(
+    "%c A simplicidade é o último grau de sofisticação. - Leonardo da Vinci ",
+    "color:hsl(240, 100%, 90%);background-color:hsl(240, 100%, 50%);"
+  );
+});
 </script>
 
 <style lang="scss" scoped>
