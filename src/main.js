@@ -6,6 +6,7 @@ import router from "./router";
 
 import * as Sentry from "@sentry/vue";
 import { BrowserTracing } from "@sentry/tracing";
+import './registerServiceWorker'
 
 const app = createApp(App);
 
