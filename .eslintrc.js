@@ -9,6 +9,7 @@ module.exports = {
     "vue/require-default-prop": "off",
     "no-unused-vars": ["error", { argsIgnorePattern: "^_" }],
     "no-console": "off",
+    "vue/multi-word-component-names": 0,
     // override/add rules settings here, such as:
     // 'vue/no-unused-vars': 'error'
   },
