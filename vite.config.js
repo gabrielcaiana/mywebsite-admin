@@ -34,6 +34,7 @@ export default defineConfig({
   plugins: [vue(), viteSentry(viteSentryConfig), eslintPlugin()],
   build: {
     sourcemap: "hidden",
+    manifest: true,
   },
   define: {
     __SENTRY_RELEASE__: `"${process.env.npm_package_name}@${process.env.npm_package_version}"`,
