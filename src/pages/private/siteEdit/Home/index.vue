@@ -48,7 +48,7 @@
 </template>
 
 <script setup>
-import { getAbout, updateAbout } from "../../../services/algolia";
+import { getAbout, updateAbout } from "@/services/algolia";
 import { ref } from "vue";
 
 const about = ref(null);

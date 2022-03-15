@@ -18,7 +18,7 @@
 </template>
 
 <script setup>
-import { getJobs } from "../../../services/algolia";
+import { getJobs } from "@/services/algolia";
 import { ref } from "vue";
 
 const jobs = ref(null);

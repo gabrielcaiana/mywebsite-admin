@@ -2,6 +2,11 @@ import useAuthUser from "../composables/UseAuthUser";
 
 const routes = [
   {
+    path: "/:pathMatch(.*)*",
+    name: "NotFound",
+    component: () => import("../pages/public/NotFound.vue"),
+  },
+  {
     path: "/login",
     redirect: () => {
       return "/";
@@ -36,6 +41,7 @@ const routes = [
     },
     component: () => import("../pages/public/AppLogin.vue"),
   },
+
   {
     path: "/forgot-password",
     name: "ForgotPassword",
@@ -49,6 +55,7 @@ const routes = [
     name: "ResetPassword",
     component: () => import("../pages/private/ResetPassword.vue"),
   },
+
   {
     name: "Logout",
     path: "/logout",
@@ -58,6 +65,7 @@ const routes = [
       return { name: "login" };
     },
   },
+
   {
     path: "/home",
     name: "home",
@@ -66,14 +74,41 @@ const routes = [
     },
     component: () => import("../pages/private/Home.vue"),
   },
-  // {
-  //   path: "/profile",
-  //   name: "profile",
-  //   meta: {
-  //     requiresAuth: true,
-  //   },
-  //   component: () => import("../pages/private/Profile.vue"),
-  // },
+  {
+    path: "/profile",
+    name: "profile",
+    meta: {
+      requiresAuth: true,
+    },
+    component: () => import("../pages/private/Profile.vue"),
+  },
+
+  {
+    path: "/home-site",
+    name: "home-site",
+    meta: {
+      requiresAuth: true,
+    },
+    component: () => import("../pages/private/siteEdit/Home/index.vue"),
+  },
+
+  {
+    path: "/jobs-site",
+    name: "jobs-site",
+    meta: {
+      requiresAuth: true,
+    },
+    component: () => import("../pages/private/siteEdit/Jobs/index.vue"),
+  },
+
+  {
+    path: "/projects-site",
+    name: "projects-site",
+    meta: {
+      requiresAuth: true,
+    },
+    component: () => import("../pages/private/siteEdit/Projects/index.vue"),
+  },
 ];
 
 export default routes;
