@@ -5,6 +5,7 @@ import { useLoggedInUserStore } from "../store/loggedInUser";
 import routes from "./routes";
 
 const router = createRouter({
+  linkExactActiveClass: "app-link-active",
   history: createWebHistory(),
   routes,
 });
