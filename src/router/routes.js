@@ -1,11 +1,11 @@
 import useAuthUser from "../composables/UseAuthUser";
 
 const routes = [
-  {
-    path: "/:pathMatch(.*)*",
-    name: "NotFound",
-    component: () => import("../pages/public/NotFound.vue"),
-  },
+  // {
+  //   path: "/:pathMatch(.*)*",
+  //   name: "NotFound",
+  //   component: () => import("../pages/public/NotFound.vue"),
+  // },
   {
     path: "/login",
     redirect: () => {
