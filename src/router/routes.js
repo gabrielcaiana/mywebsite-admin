@@ -1,6 +1,14 @@
 import useAuthUser from "../composables/UseAuthUser";
 
 const routes = [
+  {
+    path: "/service-worker.js",
+    name: "service-worker",
+    redirect: () => {
+      return `${process.env.BASE_URL}/service-worker.js`;
+    },
+  },
+
   // {
   //   path: "/:pathMatch(.*)*",
   //   name: "NotFound",
