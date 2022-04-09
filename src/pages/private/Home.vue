@@ -5,7 +5,7 @@
       href="https://v1.gabrielcaiana.com"
       class="bg-blue-500 text-white rounded-xl p-2"
     >
-      ir para o site
+      ir para o sites
     </a>
   </div>
 </template>
